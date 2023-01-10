@@ -12,3 +12,9 @@ Incremental testing, modular design, precise assumptions, and teamwork are theme
 ## 1.2
 
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202301101702406.png)
+
+
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202301101704438.png)
+
+
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202301101704731.png)
