@@ -10,3 +10,5 @@ Learning to interpret errors and diagnose the cause of unexpected errors is call
 Incremental testing, modular design, precise assumptions, and teamwork are themes that persist throughout this text. Hopefully, they will also persist throughout your computer science career.
 
 ## 1.2
+
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202301101702406.png)
