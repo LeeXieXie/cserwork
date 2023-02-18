@@ -1,4 +1,4 @@
-How to define a new function：
+# How to define a new function：
 1. def statement
 2. indicates a <name>
 3. a comma-separated list of named <formal parameters>
@@ -10,4 +10,4 @@ How to define a new function：
 	```
 6. The second line _must_ be indented — most programmers use four spaces to indent
 
-/h1.3.1 
+## 1.3.1 Environments
