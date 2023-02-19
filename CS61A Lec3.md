@@ -25,3 +25,4 @@ https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%
 https://pythontutor.com/cp/composingprograms.html#code=f%20%3D%20max%0Amax%20%3D%203%0Aresult%20%3D%20f%282,%203,%204%29%0Amax%281,%202%29%20%23%20cause%20an%20error&cumulative=true&curInstr=4&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=f%20%3D%20max%0Amax%20%3D%203%0Aresult%20%3D%20f%282,%203,%204%29%0Amax%281,%202%29%20%23%20cause%20an%20error&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=4&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
+
