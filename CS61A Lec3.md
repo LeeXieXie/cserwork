@@ -35,3 +35,7 @@ https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%
 https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20add,mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0A%0Adef%20sum_square%28x,%20y%29%3A%0A%20%20%20%20return%20add%28square%28x%29,%20suqare%28y%29%29%0A%20%20%20%20%0A%20%20%20%20%0Aresult%20%3D%20sum_square%285,%2012%29&cumulative=true&curInstr=11&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20operator%20import%20add,mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0A%0Adef%20sum_square%28x,%20y%29%3A%0A%20%20%20%20return%20add%28square%28x%29,%20suqare%28y%29%29%0A%20%20%20%20%0A%20%20%20%20%0Aresult%20%3D%20sum_square%285,%2012%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=11&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
+
+
+## 1.3.4   Local Names
+形参不影响
