@@ -39,3 +39,12 @@ https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%
 
 ## 1.3.4   Local Names
 函数的形参选择的名称不应该影响函数行为
+
+```python
+>>> def square(x):
+        return mul(x, x)
+>>> def square(y):
+        return mul(y, y)
+```
+
+
