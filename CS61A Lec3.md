@@ -38,4 +38,4 @@ https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%
 
 
 ## 1.3.4   Local Names
-形参不影响
+函数的形参选择的名称不应该影响函数行为
