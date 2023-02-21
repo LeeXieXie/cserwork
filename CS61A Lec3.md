@@ -49,3 +49,13 @@ https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%
 
 
 ## 1.3.5   Choosing Names
+The following guidelines are adapted from the [style guide for Python code](http://www.python.org/dev/peps/pep-0008), which serves as a guide for all (non-rebellious) Python programmers. A shared set of conventions smooths communication among members of a developer community. As a side effect of following these conventions, you will find that your code becomes more internally consistent.
+
+1.  Function names are lowercase, with words separated by underscores. Descriptive names are encouraged.
+2.  Function names typically evoke operations applied to arguments by the interpreter (e.g., print, add, square) or the name of the quantity that results (e.g., max, abs, sum).
+3.  Parameter names are lowercase, with words separated by underscores. Single-word names are preferred.
+4.  Parameter names should evoke the role of the parameter in the function, not just the kind of argument that is allowed.
+5.  Single letter parameter names are acceptable when their role is obvious, but avoid "l" (lowercase ell), "O" (capital oh), or "I" (capital i) to avoid confusion with numerals.
+
+## 1.3.6   Functions as Abstractions
+**Aspects of a functional abstraction.** To master the use of a functional abstraction, it is often useful to consider its three core attributes. The _domain_ of a function is the set of arguments it can take. The _range_ of a function is the set of values it can return. The _intent_ of a function is the relationship it computes between inputs and output (as well as any side effects it might generate). Understanding functional abstractions via their domain, range, and intent is critical to using them correctly in a complex program.
