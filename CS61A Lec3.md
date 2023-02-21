@@ -100,3 +100,10 @@ These two operators are shorthand for the truediv and floordiv functions.
 You should feel free to use infix operators and parentheses in your programs. Idiomatic Python prefers operators over call expressions for simple mathematical operations.
 
 # 1.4  Designing Functions
+Fundamentally, the qualities of good functions all reinforce the idea that functions are abstractions.
+
+-   Each function should have exactly one job. That job should be identifiable with a short name and characterizable in a single line of text. Functions that perform multiple jobs in sequence should be divided into multiple functions.
+-   _Don't repeat yourself_ is a central tenet of software engineering. The so-called DRY principle states that multiple fragments of code should not describe redundant logic. Instead, that logic should be implemented once, given a name, and applied multiple times. If you find yourself copying and pasting a block of code, you have probably found an opportunity for functional abstraction.
+-   Functions should be defined generally. Squaring is not in the Python Library precisely because it is a special case of the pow function, which raises numbers to arbitrary powers.
+
+## 1.4.1   Documentation
