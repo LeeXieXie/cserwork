@@ -1,3 +1,4 @@
+
 # 1.3 How to define a new function：
 1. def statement
 2. indicates a <name>
@@ -98,3 +99,4 @@ These two operators are shorthand for the truediv and floordiv functions.
 
 You should feel free to use infix operators and parentheses in your programs. Idiomatic Python prefers operators over call expressions for simple mathematical operations.
 
+# 1.4  Designing Functions
