@@ -59,3 +59,33 @@ The following guidelines are adapted from the [style guide for Python code](htt
 
 ## 1.3.6   Functions as Abstractions
 **Aspects of a functional abstraction.** To master the use of a functional abstraction, it is often useful to consider its three core attributes. The _domain_ of a function is the set of arguments it can take. The _range_ of a function is the set of values it can return. The _intent_ of a function is the relationship it computes between inputs and output (as well as any side effects it might generate). Understanding functional abstractions via their domain, range, and intent is critical to using them correctly in a complex program.
+For example, any square function that we use to implement sum_squares should have these attributes:
+
+-   The _domain_ is any single real number.
+-   The _range_ is any non-negative real number.
+-   The _intent_ is that the output is the square of the input.
+
+## 1.3.7   Operators
+When it comes to division, Python provides two infix operators: / and //. The former is normal division, so that it results in a _floating point_, or decimal value, even if the divisor evenly divides the dividend:
+/code
+>>> 5 / 4
+1.25
+>>> 8 / 4
+2.0
+
+The // operator, on the other hand, rounds the result down to an integer:
+
+>>> 5 // 4
+1
+>>> -5 // 4
+-2
+
+These two operators are shorthand for the truediv and floordiv functions.
+
+>>> from operator import truediv, floordiv
+>>> truediv(5, 4)
+1.25
+>>> floordiv(5, 4)
+1
+
+You should feel free to use infix operators and parentheses in your programs. Idiomatic Python prefers operators over call expressions for simple mathematical operations.
