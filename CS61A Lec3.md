@@ -107,3 +107,19 @@ Fundamentally, the qualities of good functions all reinforce the idea that funct
 -   Functions should be defined generally. Squaring is not in the Python Library precisely because it is a special case of the pow function, which raises numbers to arbitrary powers.
 
 ## 1.4.1   Documentation
+A function definition will often include documentation describing the function, called a _docstring_, which must be indented along with the function body. Docstrings are conventionally triple quoted. The first line describes the job of the function in one line. The following lines can describe arguments and clarify the behavior of the function:
+
+
+```python
+>>> def pressure(v, t, n):
+        """Compute the pressure in pascals of an ideal gas.
+
+        Applies the ideal gas law: http://en.wikipedia.org/wiki/Ideal_gas_law
+
+        v -- volume of gas, in cubic meters
+        t -- absolute temperature in degrees kelvin
+        n -- particles of gas
+        """
+        k = 1.38e-23  # Boltzmann's constant
+        return n * k * t / v
+```
