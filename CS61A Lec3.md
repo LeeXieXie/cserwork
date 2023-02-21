@@ -67,25 +67,34 @@ For example, any square function that we use to implement sum_squares should
 
 ## 1.3.7   Operators
 When it comes to division, Python provides two infix operators: / and //. The former is normal division, so that it results in a _floating point_, or decimal value, even if the divisor evenly divides the dividend:
-/code
+
+```python
 >>> 5 / 4
 1.25
 >>> 8 / 4
 2.0
+```
 
 The // operator, on the other hand, rounds the result down to an integer:
 
+```python
 >>> 5 // 4
 1
 >>> -5 // 4
 -2
+```
+
 
 These two operators are shorthand for the truediv and floordiv functions.
 
+
+```python
 >>> from operator import truediv, floordiv
 >>> truediv(5, 4)
 1.25
 >>> floordiv(5, 4)
 1
+```
 
 You should feel free to use infix operators and parentheses in your programs. Idiomatic Python prefers operators over call expressions for simple mathematical operations.
+
