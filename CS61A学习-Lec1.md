@@ -1,3 +1,7 @@
+---
+link: https://www.notion.so/CS61A-Lec1-53bf10d729844c6cad38a023bacf5584
+notionID: 53bf10d7-2984-4c6c-ad38-a023bacf5584
+---
 ## python
 ### 1.Objects
 

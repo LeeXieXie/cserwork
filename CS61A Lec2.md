@@ -1,3 +1,7 @@
+---
+link: https://www.notion.so/CS61A-Lec2-e8869fadfafe45dd86463c3300c87576
+notionID: e8869fad-fafe-45dd-8646-3c3300c87576
+---
 # 预习
 ## 1.1
 Learning to interpret errors and diagnose the cause of unexpected errors is called _debugging_. Some guiding principles of debugging are:
