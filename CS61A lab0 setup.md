@@ -4,3 +4,5 @@ https://www.bilibili.com/video/BV1s3411G7yM/?p=3&spm_id_from=pageDriver&vd_sourc
 ```
 from json import loads; from urllib.request import urlopen; loads(urlopen('https://www.howsmyssl.com/a/check').read().decode('UTF-8'))['tls_version']
 ```
+
+测试

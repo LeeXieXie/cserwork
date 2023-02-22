@@ -42,3 +42,6 @@ print(y)
 {w for w in words if w == w[::-1] and len(w) == 4}
 {w for w in words if w == w[::-1] and len(w) > 6}
 ```
+
+
+1 + 1
