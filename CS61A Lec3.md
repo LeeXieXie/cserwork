@@ -335,3 +335,7 @@ python3 -m doctest <python_source_file>
 
 
 The key to effective testing is to write (and run) tests immediately after implementing new functions. It is even good practice to write some tests before you implement, in order to have some example inputs and outputs in your mind. A test that applies a single function is called a _unit test_. Exhaustive unit testing is a hallmark of good program design.
+
+
+
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202302230028687.png)
