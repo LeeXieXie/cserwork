@@ -15,4 +15,3 @@ git config --global http.proxy http://127.0.0.1:7890
 	大家根据自己的代理自行设置
 
 
-1111111
