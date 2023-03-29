@@ -98,3 +98,48 @@ The 1 in compose1 is meant to signify that the composed functions all take a s
 > 
 > Newton's Method is widely used in various fields such as engineering, physics, and finance for solving complex problems that involve finding the roots of a function.
 
+A motivating comment before we proceed: it is easy to take for granted the fact that we know how to compute square roots. Not just Python, but your phone, web browser, or pocket calculator can do so for you. However, part of learning computer science is understanding how quantities like these can be computed, and the general approach presented here is applicable to solving a large class of equations beyond those built into Python.
+
+Newton's method is an iterative improvement algorithm: it improves a guess of the zero for any function that is _differentiable_, which means that it can be approximated by a straight line at any point. Newton's method follows these linear approximations to find function zeros.
+
+A newton_update expresses the computational process of following this tangent line to 0, for a function f and its derivative df.
+
+```python
+>>> def newton_update(f, df):
+        def update(x):
+            return x - f(x) / df(x)
+        return update
+
+```
+
+Finally, we can define the find_root function in terms of newton_update, our improve algorithm, and a comparison to see if f(x) is near 0.
+
+```python
+
+>>> def find_zero(f, df):
+        def near_zero(x):
+            return approx_eq(f(x), 0)
+        return improve(newton_update(f, df), near_zero)
+```
+
+## 1.6.6   Currying
+
+We can use higher-order functions to convert a function that takes multiple arguments into a chain of functions that each take a single argument. More specifically, given a function f(x, y), we can define a function g such that g(x)(y) is equivalent to f(x, y). Here, g is a higher-order function that takes in a single argument x and returns another function that takes in a single argument y. This transformation is called _currying_.
+
+As an example, we can define a curried version of the pow function:
+
+```python
+
+>>> def curried_pow(x):
+        def h(y):
+            return pow(x, y)
+        return h
+
+>>> curried_pow(2)(3)
+8
+```
+	for single argument program!
+
+Some programming languages, such as Haskell, only allow functions that take a single argument, so the programmer must curry all multi-argument procedures. In more general languages such as Python, currying is useful when we require a function that takes in only a single argument. For example, the _map_ pattern applies a single-argument function to a sequence of values. In later chapters, we will see more general examples of the map pattern, but for now, we can implement the pattern in a function:
+
+
