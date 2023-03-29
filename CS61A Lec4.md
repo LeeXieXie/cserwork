@@ -209,4 +209,3 @@ The result of a lambda expression is called a lambda function. It has no intrins
 144
 ```
 In an environment diagram, the result of a lambda expression is a function as well, named with the greek letter λ (lambda). Our compose example can be expressed quite compactly with lambda expressions.
-
