@@ -86,3 +86,15 @@ The 1 in compose1 is meant to signify that the composed functions all take a s
 
 ## 1.6.5   Example: Newton's Method
 
+> Newton's Method is a numerical method used to find the roots of a function. It is based on the idea of using the tangent line to a curve to approximate the location of its roots. The method starts with an initial guess for the root of the function and then uses the tangent line to the curve at that point to find a better approximation for the root. This process is repeated until the desired level of accuracy is achieved.
+> 
+> The formula for Newton's Method is:
+> 
+> x_{n+1} = x_n - f(x_n) / f'(x_n)
+> 
+> where x_n is the nth approximation for the root, f(x_n) is the value of the function at x_n, and f'(x_n) is the derivative of the function at x_n.
+> 
+> The method can be used to find both real and complex roots of a function. However, it may not converge to a root if the initial guess is too far from the actual root or if the function has multiple roots in the same vicinity.
+> 
+> Newton's Method is widely used in various fields such as engineering, physics, and finance for solving complex problems that involve finding the roots of a function.
+
