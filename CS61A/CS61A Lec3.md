@@ -16,24 +16,24 @@ https://pythontutor.com/cp/composingprograms.html#mode=display
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20math%20import%20pi%0Atau%20%3D%202%20*%20pi&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=2&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
 
-https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29&cumulative=true&curInstr=0&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
+[Online Python Tutor - Composing Programs - Python 3](https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29&cumulative=true&curInstr=0&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D)
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20operator%20import%20mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=2&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
 
 
 	The name appearing in the function is called the _intrinsic name_. The name in a frame is a _bound name_. There is a difference between the two: different names may refer to the same function, but that function itself has only one **intrinsic name**.
 
-https://pythontutor.com/cp/composingprograms.html#code=f%20%3D%20max%0Amax%20%3D%203%0Aresult%20%3D%20f%282,%203,%204%29%0Amax%281,%202%29%20%23%20cause%20an%20error&cumulative=true&curInstr=4&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
+[Online Python Tutor - Composing Programs - Python 3](https://pythontutor.com/cp/composingprograms.html#code=f%20%3D%20max%0Amax%20%3D%203%0Aresult%20%3D%20f%282,%203,%204%29%0Amax%281,%202%29%20%23%20cause%20an%20error&cumulative=true&curInstr=4&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D)
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=f%20%3D%20max%0Amax%20%3D%203%0Aresult%20%3D%20f%282,%203,%204%29%0Amax%281,%202%29%20%23%20cause%20an%20error&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=4&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
 
 ## 1.3.2   Calling User-Defined Functions
-https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0Asquare%28-2%29&cumulative=true&curInstr=6&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
+[Online Python Tutor - Composing Programs - Python 3](https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0Asquare%28-2%29&cumulative=true&curInstr=6&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D)
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20operator%20import%20mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0Asquare%28-2%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=6&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
 
 ## 1.3.3   Example: Calling a User-Defined Function
-https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20add,mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0A%0Adef%20sum_square%28x,%20y%29%3A%0A%20%20%20%20return%20add%28square%28x%29,%20suqare%28y%29%29%0A%20%20%20%20%0A%20%20%20%20%0Aresult%20%3D%20sum_square%285,%2012%29&cumulative=true&curInstr=11&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
+[Online Python Tutor - Composing Programs - Python 3](https://pythontutor.com/cp/composingprograms.html#code=from%20operator%20import%20add,mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0A%0Adef%20sum_square%28x,%20y%29%3A%0A%20%20%20%20return%20add%28square%28x%29,%20suqare%28y%29%29%0A%20%20%20%20%0A%20%20%20%20%0Aresult%20%3D%20sum_square%285,%2012%29&cumulative=true&curInstr=11&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D)
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20operator%20import%20add,mul%0Adef%20square%28x%29%3A%0A%20%20%20%20return%20mul%28x,%20x%29%0A%0Adef%20sum_square%28x,%20y%29%3A%0A%20%20%20%20return%20add%28square%28x%29,%20suqare%28y%29%29%0A%20%20%20%20%0A%20%20%20%20%0Aresult%20%3D%20sum_square%285,%2012%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=11&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
 
@@ -165,7 +165,7 @@ We can also understand multi-line programs now.
 **Practical Guidance.** When indenting a suite, all lines must be indented the same amount and in the same way (use spaces, not tabs). Any variation in indentation will cause an error.
 
 ## 1.5.3   Defining Functions II: Local Assignment
-https://pythontutor.com/cp/composingprograms.html#code=def%20percent_difference%28x,%20y%29%3A%0A%20%20%20%20difference%20%3D%20abs%28x-y%29%0A%20%20%20%20return%20100%20*%20difference%20/%20x%0Aresult%20%3D%20percent_difference%2840,%2050%29&cumulative=true&curInstr=6&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D
+[Online Python Tutor - Composing Programs - Python 3](https://pythontutor.com/cp/composingprograms.html#code=def%20percent_difference%28x,%20y%29%3A%0A%20%20%20%20difference%20%3D%20abs%28x-y%29%0A%20%20%20%20return%20100%20*%20difference%20/%20x%0Aresult%20%3D%20percent_difference%2840,%2050%29&cumulative=true&curInstr=6&mode=display&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D)
 
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20percent_difference%28x,%20y%29%3A%0A%20%20%20%20difference%20%3D%20abs%28x-y%29%0A%20%20%20%20return%20100%20*%20difference%20/%20x%0Aresult%20%3D%20percent_difference%2840,%2050%29&codeDivHeight=400&codeDivWidth=350&cumulative=true&curInstr=6&origin=composingprograms.js&py=3&rawInputLstJSON=%5B%5D"> </iframe>
 
