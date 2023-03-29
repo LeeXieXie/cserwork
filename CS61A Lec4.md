@@ -85,3 +85,4 @@ The 1 in compose1 is meant to signify that the composed functions all take a s
 	(`compose1` 中的 1 表示这个组合的函数只有一个参数。这个命名惯例不是解释器强制要求的，1 只是函数名的一部分而已。)
 
 ## 1.6.5   Example: Newton's Method
+
