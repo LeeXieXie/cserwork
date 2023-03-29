@@ -184,7 +184,8 @@ The curry2 function takes in a two-argument function f and returns a single-
 
 So far, each time we have wanted to define a new function, we needed to give it a name. But for other types of expressions, we don't need to associate intermediate values with a name. That is, we can compute a*b + c*d without having to name the subexpressions a*b or c*d, or the full expression. In Python, we can create function values on the fly using lambda expressions, which evaluate to unnamed functions. A lambda expression evaluates to a function that has a single return expression as its body. Assignment and control statements are not allowed.
 
-	到目前为止，每当我们想要定义一个新函数时，都需要给它取一个名字。但是对于其他类型的表达式，我们不需要将中间值与名称相关联。也就是说，我们可以计算 `a * b + c * d` 而不必命名子表达式 `a*b` 或 `c*d` 或完整的表达式。
+到目前为止，每当我们想要定义一个新函数时，都需要给它取一个名字。但是对于其他类型的表达式，我们不需要将中间值与名称相关联。也就是说，我们可以计算 `a * b + c * d` 而不必命名子表达式 `a*b` 或 `c*d` 或完整的表达式。
+
 
 ```python
 >>> def compose1(f, g):
@@ -198,8 +199,8 @@ We can understand the structure of a lambda expression by constructing a corre
 "A function that    takes x    and returns     f(g(x))"
 ```
 
-The result of a lambda expression is called a lambda function. It has no intrinsic name (and so Python prints <lambda> for the name), but otherwise it behaves like any other function.
 
+	The result of a lambda expression is called a lambda function. It has no intrinsic name (and so Python prints <lambda> for the name), but otherwise it behaves like any other function.
 
 ```python
 >>> s = lambda x: x * x
@@ -209,3 +210,52 @@ The result of a lambda expression is called a lambda function. It has no intrins
 144
 ```
 In an environment diagram, the result of a lambda expression is a function as well, named with the greek letter λ (lambda). Our compose example can be expressed quite compactly with lambda expressions.
+
+[Python Tutor code visualizer: Visualize code in Python, JavaScript, C, C++, and Java](https://pythontutor.com/visualize.html#code=def%20compose1%28f,%20g%29%3A%0A%20%20%20%20return%20lambda%20x%3A%20f%28g%28x%29%29%0A%0Af%20%3D%20compose1%28lambda%20x%3A%20x%20*%20x,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20lambda%20y%3A%20y%20%2B%201%29%0Aresult%20%3D%20f%2812%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20compose1%28f,%20g%29%3A%0A%20%20%20%20return%20lambda%20x%3A%20f%28g%28x%29%29%0A%0Af%20%3D%20compose1%28lambda%20x%3A%20x%20*%20x,%0A%20%20%20%20%20%20%20%20%20%20%20%20%20lambda%20y%3A%20y%20%2B%201%29%0Aresult%20%3D%20f%2812%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+## 1.6.8   Abstractions and First-Class Functions
+
+Some of the "rights and privileges" of first-class elements are:
+
+1.  They may be bound to names.
+2.  They may be passed as arguments to functions.
+3.  They may be returned as the results of functions.
+4.  They may be included in data structures.
+
+Python awards functions full first-class status, and the resulting gain in expressive power is enormous.
+
+## 1.6.9   Function Decorators
+
+Python provides special syntax to apply higher-order functions as part of executing a def statement, called a decorator. Perhaps the most common example is a trace.
+
+```python
+>>> def trace(fn):
+        def wrapped(x):
+            print('-> ', fn, '(', x, ')')
+            return fn(x)
+        return wrapped
+
+>>> @trace
+    def triple(x):
+        return 3 * x
+
+>>> triple(12)
+->  <function triple at 0x102a39848> ( 12 )
+36
+```
+
+In this example, A higher-order function trace is defined, which returns a function that precedes a call to its argument with a print statement that outputs the argument. The def statement for triple has an annotation, @trace, which affects the execution rule for def. As usual, the function triple is created. However, the name triple is not bound to this function. Instead, the name triple is bound to the returned function value of calling trace on the newly defined triple function. In code, this decorator is equivalent to:
+
+```python
+>>> def triple(x):
+        return 3 * x
+
+>>> triple = trace(triple)
+```
+
+
+In the projects associated with this text, decorators are used for tracing, as well as selecting which functions to call when a program is run from the command line.
+
+**Extra for experts.** The decorator symbol @ may also be followed by a call expression. The expression following @ is evaluated first (just as the name trace was evaluated above), the def statement second, and finally the result of evaluating the decorator expression is applied to the newly defined function, and the result is bound to the name in the def statement. A [short tutorial on decorators](http://programmingbits.pythonblogs.com/27_programmingbits/archive/50_function_decorators.html) by Ariel Ortiz gives further examples for interested students.
