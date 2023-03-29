@@ -142,4 +142,69 @@ As an example, we can define a curried version of the pow function:
 
 Some programming languages, such as Haskell, only allow functions that take a single argument, so the programmer must curry all multi-argument procedures. In more general languages such as Python, currying is useful when we require a function that takes in only a single argument. For example, the _map_ pattern applies a single-argument function to a sequence of values. In later chapters, we will see more general examples of the map pattern, but for now, we can implement the pattern in a function:
 
+we can define functions to automate currying, as well as the inverse _uncurrying_ transformation:
+```python
+>>> def curry2(f):
+        """Return a curried version of the given two-argument function."""
+        def g(x):
+            def h(y):
+                return f(x, y)
+            return h
+        return g
 
+>>> def uncurry2(g):
+        """Return a two-argument version of the given curried function."""
+        def f(x, y):
+            return g(x)(y)
+        return f
+
+>>> pow_curried = curry2(pow)
+>>> pow_curried(2)(5)
+32
+>>> map_to_range(0, 10, pow_curried(2))
+1
+2
+4
+8
+16
+32
+64
+128
+256
+512
+```
+
+The curry2 function takes in a two-argument function f and returns a single-argument function g. When g is applied to an argument x, it returns a single-argument function h. When h is applied to y, it calls f(x, y). Thus, curry2(f)(x)(y) is equivalent to f(x, y). The uncurry2 function reverses the currying transformation, so that uncurry2(curry2(f)) is equivalent to f.
+
+```python
+>>> uncurry2(pow_curried)(2, 5)
+32
+```
+## 1.6.7   Lambda Expressions
+
+So far, each time we have wanted to define a new function, we needed to give it a name. But for other types of expressions, we don't need to associate intermediate values with a name. That is, we can compute a*b + c*d without having to name the subexpressions a*b or c*d, or the full expression. In Python, we can create function values on the fly using lambda expressions, which evaluate to unnamed functions. A lambda expression evaluates to a function that has a single return expression as its body. Assignment and control statements are not allowed.
+
+	到目前为止，每当我们想要定义一个新函数时，都需要给它取一个名字。但是对于其他类型的表达式，我们不需要将中间值与名称相关联。也就是说，我们可以计算 `a * b + c * d` 而不必命名子表达式 `a*b` 或 `c*d` 或完整的表达式。
+
+```python
+>>> def compose1(f, g):
+        return lambda x: f(g(x))
+```
+
+We can understand the structure of a lambda expression by constructing a corresponding English sentence:
+
+```python
+ lambda            x            :          f(g(x))
+"A function that    takes x    and returns     f(g(x))"
+```
+
+The result of a lambda expression is called a lambda function. It has no intrinsic name (and so Python prints <lambda> for the name), but otherwise it behaves like any other function.
+
+
+```python
+>>> s = lambda x: x * x
+>>> s
+<function <lambda> at 0xf3f490>
+>>> s(12)
+144
+```
