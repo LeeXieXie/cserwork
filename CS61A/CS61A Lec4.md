@@ -1,6 +1,17 @@
 # 1.6   Higher-Order Functions
 This section shows how higher-order functions can serve as powerful abstraction mechanisms, vastly increasing the expressive power of our language.
 
+**Functions are first-class:** Functions can be manipulated as values in our programming language.
+
+**Higher-order function:** A function that takes a function as an argument value or returns a function as a return value
+
+Higher-order functions:
+
+- Express general methods of computation
+
+- Remove repetition from programs
+
+- Separate concerns among functions
 
 ## 1.6.1   Functions as Arguments
 a common underlying pattern
