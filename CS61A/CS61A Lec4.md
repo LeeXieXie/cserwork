@@ -1,5 +1,7 @@
 # 1.6   Higher-Order Functions
 This section shows how higher-order functions can serve as powerful abstraction mechanisms, vastly increasing the expressive power of our language.
+
+
 ## 1.6.1   Functions as Arguments
 a common underlying pattern
 ```python
