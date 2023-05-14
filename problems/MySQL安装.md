@@ -80,3 +80,6 @@ default-character-set=utf8mb4
 ![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141221677.png)
 
 输入以下命令行进行数据库登录：**mysql -u root -p**
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141222214.png)
+
+# 6 更改密码
