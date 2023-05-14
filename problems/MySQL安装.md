@@ -62,3 +62,21 @@ default-character-set=utf8mb4
 **mysqld --install （自己命名服务名）不命名默认mysql --defaults-file="D:\DB\mysql-8.0.31-winx64\my.ini"**  
 我安装一个MySQL8031版本的
 **mysqld --install  MySQL8031 --defaults-file="D:\DB\mysql-8.0.31-winx64\my.ini"**   
+如果你想建的服务名称已存在，那么可以用我下述操作
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141217368.png)
+在管理员的CMD下输入
+**sc queryex type=service state=all >> ser.txt**
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141217572.png)
+然后，我们可以在txt文本内查找已存在的服务名称，输入
+**sc delete MySQL8031**
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141219857.png)
+此时即可删除服务
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141219647.png)
+
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141220770.png)
+启动服务：  
+**net start （自己命名的服务名）**  
+
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141221677.png)
+
+输入以下命令行进行数据库登录：**mysql -u root -p**
