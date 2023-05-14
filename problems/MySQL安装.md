@@ -56,3 +56,9 @@ default-character-set=utf8mb4
 以管理员身份运行CMD  
 进入到mysql文件夹下的bin目录输入以下命令：  
 **mysqld --initialize --console**
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141208757.png)
+
+下一步执行以下命令：  
+**mysqld --install （自己命名服务名）不命名默认mysql --defaults-file="D:\DB\mysql-8.0.31-winx64\my.ini"**  
+我安装一个MySQL8031版本的
+**mysqld --install  MySQL8031 --defaults-file="D:\DB\mysql-8.0.31-winx64\my.ini"**   
