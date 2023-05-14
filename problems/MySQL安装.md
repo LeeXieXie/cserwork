@@ -49,3 +49,8 @@ default-character-set=utf8mb4
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141151680.png)
 相同的前缀进行聚合
 ![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141153058.png)
+
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141155639.png)
+
+# 5 安装
+
