@@ -53,4 +53,6 @@ default-character-set=utf8mb4
 ![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141155639.png)
 
 # 5 安装
-
+以管理员身份运行CMD  
+进入到mysql文件夹下的bin目录输入以下命令：  
+**mysqld --initialize --console**
