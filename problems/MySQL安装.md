@@ -48,3 +48,4 @@ default-character-set=utf8mb4
 可以用这个办法解决：
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141151680.png)
 相同的前缀进行聚合
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141153058.png)
