@@ -83,3 +83,6 @@ default-character-set=utf8mb4
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141222214.png)
 
 # 6 更改密码
+输入 **ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';**
+记住**；**不能够忘记。
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305141224672.png)
