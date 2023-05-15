@@ -11,3 +11,7 @@
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305152135710.png)
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305152143681.png)
 ### 2.1.1 128kbps
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305152148479.png)
+### 2.1.3 96kbps
+![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305152148251.png)
+## 2.2 分析压缩前后，比特率、压缩比、文件大小的关系
