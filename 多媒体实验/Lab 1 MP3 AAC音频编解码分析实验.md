@@ -15,6 +15,61 @@
 ### 2.1.3 96kbps
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305152148251.png)
 ## 2.2 分析压缩前后，比特率、压缩比、文件大小的关系
+分析python代码
+```
+import os  
+def get_file_size(file_path):  
+# 获取文件大小（字节数）  
+return os.stat(file_path).st_size  
+def analyze_compression(input_file, output_file):  
+# 获取压缩前文件大小  
+original_size = get_file_size(input_file)  
+  
+# 获取压缩后文件大小  
+compressed_size = get_file_size(output_file)  
+  
+# 计算压缩比  
+compression_ratio = original_size / compressed_size  
+  
+# 打印结果  
+print("原始文件大小->", input_file,":", original_size, "字节")  
+print("压缩后文件大小->", output_file,":", compressed_size, "字节")  
+print("压缩比->", compression_ratio)  
+  
+  
+for i in range(1, 11):  
+print(f"第 {i} 个音频文件：")  
+  
+input_file = f"D:\多媒体实验\Lab1\wav\{i}.wav" # 原始 WAV 文件路径  
+  
+# 320kbps 压缩  
+print("MP3-320kbps")  
+output_file = f"D:\多媒体实验\Lab1\wav\MP3_320kbps\{i}_320.mp3" # 压缩后 MP3 文件路径  
+analyze_compression(input_file, output_file)  
+print("AAC-320kbps")  
+output_file = f"D:\多媒体实验\Lab1\wav\AAC_320kbps\{i}_320.aac" # 压缩后 MP3 文件路径  
+analyze_compression(input_file, output_file)  
+  
+# 128kbps 压缩  
+print("MP3-128kbps")  
+output_file = f"D:\多媒体实验\Lab1\wav\MP3_128kbps\{i}_128.mp3" # 压缩后 MP3 文件路径  
+analyze_compression(input_file, output_file)  
+print("AAC-128kbps")  
+output_file = f"D:\多媒体实验\Lab1\wav\AAC_128kbps\{i}_128.aac" # 压缩后 MP3 文件路径  
+analyze_compression(input_file, output_file)  
+  
+# 96kbps 压缩  
+print("MP3-96kbps")  
+output_file = f"D:\多媒体实验\Lab1\wav\MP3_96kbps\{i}_96.mp3" # 压缩后 MP3 文件路径  
+analyze_compression(input_file, output_file)  
+print("AAC-96kbps")  
+output_file = f"D:\多媒体实验\Lab1\wav\AAC_96kbps\{i}_96.aac" # 压缩后 MP3 文件路径  
+analyze_compression(input_file, output_file)  
+  
+print() # 打印空行分隔不同音频文件的输出
+```
+
+
 ```
 第 1 个音频文件：  
 MP3-320kbps  
