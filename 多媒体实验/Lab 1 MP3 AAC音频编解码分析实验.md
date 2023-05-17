@@ -618,6 +618,216 @@ AAC-96kbps
 压缩后文件大小-> D:\多媒体实验\Lab1\wav\AAC_96kbps\10_96.aac : 711422 字节  
 压缩比-> 3.7193733114803873
 ```
-## 4 解码MP3
+## 4 解码MP3和AAC
+我采用python的库来进行解码，pydub库将MP3和AAC解码为WAV,代码如下：
+```python
+import os  
+from pydub import AudioSegment  
+  
+def decode_mp3_to_wav(mp3_file, wav_file):  
+# 将MP3文件解码为WAV文件  
+audio = AudioSegment.from_mp3(mp3_file)  
+audio.export(wav_file, format='wav')  
+  
+def decode_aac_to_wav(aac_file, wav_file):  
+# 将AAC文件解码为WAV文件  
+audio = AudioSegment.from_file(aac_file, format='aac')  
+audio.export(wav_file, format='wav')  
+def decode(rate):  
+  
+for i in range(1, 11):  
+print(f"第 {i} 个音频文件：")  
+  
+output_dir_mp3 = fr"D:\多媒体实验\Lab1\wav\decode\MP3_{rate}kbps" # 目标目录路径  
+if not os.path.exists(output_dir_mp3):  
+os.makedirs(output_dir_mp3)  
+output_file = os.path.join(output_dir_mp3, f"{i}_{rate}.wav") # 压缩后 MP3 文件路径  
+mp3_file = f"D:\多媒体实验\Lab1\wav\MP3_{rate}kbps\{i}_{rate}.mp3" # MP3文件路径  
+print(f"MP3-{rate}kbps->", mp3_file)  
+decode_mp3_to_wav(mp3_file, output_file)  
+print("MP3解码完成！")  
+  
+output_dir_aac = fr"D:\多媒体实验\Lab1\wav\decode\AAC_{rate}kbps" # 目标目录路径  
+if not os.path.exists(output_dir_aac):  
+os.makedirs(output_dir_aac)  
+output_file = os.path.join(output_dir_aac, f"{i}_{rate}.wav") # 压缩后 MP3 文件路径  
+aac_file = f"D:\多媒体实验\Lab1\wav\AAC_{rate}kbps\{i}_{rate}.aac" # AAC文件路径  
+print(f"AAC-{rate}kbps->", aac_file)  
+decode_aac_to_wav(aac_file, output_file)  
+print("AAC解码完成！")  
+  
+print("MP3解码：320kbps")  
+decode(320)  
+print("MP3解码：320kbps finish！")  
+print("MP3解码：128kbps")  
+decode(128)  
+print("MP3解码：128kbps finish！")  
+print("MP3解码：96kbps")  
+decode(96)  
+print("MP3解码：96kbps finish！")
+```
 
-[Index of /download/win64/1.31.3](http://www.mpg123.de/download/win64/1.31.3/)
+```txt
+MP3解码：320kbps  
+第 1 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\1_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\1_320.aac  
+AAC解码完成！  
+第 2 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\2_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\2_320.aac  
+AAC解码完成！  
+第 3 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\3_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\3_320.aac  
+AAC解码完成！  
+第 4 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\4_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\4_320.aac  
+AAC解码完成！  
+第 5 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\5_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\5_320.aac  
+AAC解码完成！  
+第 6 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\6_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\6_320.aac  
+AAC解码完成！  
+第 7 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\7_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\7_320.aac  
+AAC解码完成！  
+第 8 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\8_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\8_320.aac  
+AAC解码完成！  
+第 9 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\9_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\9_320.aac  
+AAC解码完成！  
+第 10 个音频文件：  
+MP3-320kbps-> D:\多媒体实验\Lab1\wav\MP3_320kbps\10_320.mp3  
+MP3解码完成！  
+AAC-320kbps-> D:\多媒体实验\Lab1\wav\AAC_320kbps\10_320.aac  
+AAC解码完成！  
+MP3解码：320kbps finish！  
+MP3解码：128kbps  
+第 1 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\1_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\1_128.aac  
+AAC解码完成！  
+第 2 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\2_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\2_128.aac  
+AAC解码完成！  
+第 3 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\3_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\3_128.aac  
+AAC解码完成！  
+第 4 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\4_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\4_128.aac  
+AAC解码完成！  
+第 5 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\5_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\5_128.aac  
+AAC解码完成！  
+第 6 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\6_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\6_128.aac  
+AAC解码完成！  
+第 7 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\7_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\7_128.aac  
+AAC解码完成！  
+第 8 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\8_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\8_128.aac  
+AAC解码完成！  
+第 9 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\9_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\9_128.aac  
+AAC解码完成！  
+第 10 个音频文件：  
+MP3-128kbps-> D:\多媒体实验\Lab1\wav\MP3_128kbps\10_128.mp3  
+MP3解码完成！  
+AAC-128kbps-> D:\多媒体实验\Lab1\wav\AAC_128kbps\10_128.aac  
+AAC解码完成！  
+MP3解码：128kbps finish！  
+MP3解码：96kbps  
+第 1 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\1_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\1_96.aac  
+AAC解码完成！  
+第 2 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\2_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\2_96.aac  
+AAC解码完成！  
+第 3 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\3_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\3_96.aac  
+AAC解码完成！  
+第 4 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\4_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\4_96.aac  
+AAC解码完成！  
+第 5 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\5_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\5_96.aac  
+AAC解码完成！  
+第 6 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\6_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\6_96.aac  
+AAC解码完成！  
+第 7 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\7_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\7_96.aac  
+AAC解码完成！  
+第 8 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\8_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\8_96.aac  
+AAC解码完成！  
+第 9 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\9_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\9_96.aac  
+AAC解码完成！  
+第 10 个音频文件：  
+MP3-96kbps-> D:\多媒体实验\Lab1\wav\MP3_96kbps\10_96.mp3  
+MP3解码完成！  
+AAC-96kbps-> D:\多媒体实验\Lab1\wav\AAC_96kbps\10_96.aac  
+AAC解码完成！  
+MP3解码：96kbps finish！
+```
+
+## 5 比较解码后音频的质量
+采用python代码
+```python
+
+```
