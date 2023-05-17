@@ -829,5 +829,29 @@ MP3解码：96kbps finish！
 ## 5 比较解码后音频的质量
 采用python代码
 ```python
-
+import pesq  
+  
+def calculate_audio_quality(reference_file, degraded_file, rate):  
+# 计算音频质量得分  
+quality_score = pesq.pesq(reference_file, degraded_file, 'wb', rate)  
+return quality_score  
+  
+def score(rate):  
+for i in range(1, 11):  
+print(f"第 {i} 个音频文件：")  
+  
+reference_file = f"D:\多媒体实验\Lab1\wav\{i}.wav" # 原始音频文件路径  
+decode_mp3_file = f"D:\多媒体实验\Lab1\wav\decode\MP3_{rate}kbps\{i}_{rate}.wav" # 使用MP3解码后的音频文件路径  
+decode_aac_file = f"D:\多媒体实验\Lab1\wav\decode\AAC_{rate}kbps\{i}_{rate}.wav" # 使用AAC解码后的音频文件路径  
+  
+  
+mp3_quality = calculate_audio_quality(reference_file, decode_mp3_file, rate)  
+aac_quality = calculate_audio_quality(reference_file, decode_aac_file, rate)  
+  
+print(f"Decode_MP3_{rate}音频质量得分：", mp3_quality)  
+print(f"Decode_AAC_{rate}音频质量得分：", aac_quality)  
+  
+score(320)  
+score(128)  
+score(96)
 ```
