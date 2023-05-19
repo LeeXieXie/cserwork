@@ -182,7 +182,7 @@ plt.close()
 import subprocess  
   
 for i in range(1, 6):  
-command = fr"D:\多媒体实验\Lab3\MP3Stego_1_1_19\Encode.exe -P mp3stego{i} D:\多媒体实验\Lab3\{i}.wav D:\多媒体实验\Lab3\{i}_h.wav"  
+command = fr"D:\多媒体实验\Lab3\MP3Stego_1_1_19\Encode.exe -E D:\多媒体实验\Lab3\MP3Stego_1_1_19\hidden_text.txt -P pass D:\多媒体实验\Lab3\{i}.wav D:\多媒体实验\Lab3\{i}_h.wav"  
 # 执行命令  
 subprocess.run(command, shell=True)
 ```
@@ -195,6 +195,7 @@ Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
 MPEG-I layer III, stereo  Psychoacoustic Model: AT&T
 Bitrate=128 kbps  De-emphasis: none  CRC: off  
 Encoding "D:\��ý��ʵ��\Lab3\1.wav" to "D:\��ý��ʵ��\Lab3\1_h.wav"
+Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
 MP3StegoEncoder 1.1.19
 See README file for copyright info
@@ -202,6 +203,7 @@ Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
 MPEG-I layer III, stereo  Psychoacoustic Model: AT&T
 Bitrate=128 kbps  De-emphasis: none  CRC: off  
 Encoding "D:\��ý��ʵ��\Lab3\2.wav" to "D:\��ý��ʵ��\Lab3\2_h.wav"
+Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
 MP3StegoEncoder 1.1.19
 See README file for copyright info
@@ -209,6 +211,7 @@ Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
 MPEG-I layer III, stereo  Psychoacoustic Model: AT&T
 Bitrate=128 kbps  De-emphasis: none  CRC: off  
 Encoding "D:\��ý��ʵ��\Lab3\3.wav" to "D:\��ý��ʵ��\Lab3\3_h.wav"
+Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
 MP3StegoEncoder 1.1.19
 See README file for copyright info
@@ -216,6 +219,7 @@ Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
 MPEG-I layer III, stereo  Psychoacoustic Model: AT&T
 Bitrate=128 kbps  De-emphasis: none  CRC: off  
 Encoding "D:\��ý��ʵ��\Lab3\4.wav" to "D:\��ý��ʵ��\Lab3\4_h.wav"
+Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
 MP3StegoEncoder 1.1.19
 See README file for copyright info
@@ -223,6 +227,7 @@ Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
 MPEG-I layer III, stereo  Psychoacoustic Model: AT&T
 Bitrate=128 kbps  De-emphasis: none  CRC: off  
 Encoding "D:\��ý��ʵ��\Lab3\5.wav" to "D:\��ý��ʵ��\Lab3\5_h.wav"
+Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
 
 ```
