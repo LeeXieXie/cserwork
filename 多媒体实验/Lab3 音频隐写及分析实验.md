@@ -176,4 +176,5 @@ plt.close()
 ![4.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192217936.png)
 5.wav
 ![5.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192217250.png)
+## 3 使用MP3Stego隐写软件
 
