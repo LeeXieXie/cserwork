@@ -182,13 +182,26 @@ plt.close()
 import subprocess  
   
 for i in range(1, 6):  
+print(f"第{i}个音频文件：" + f"{i}.wav")  
+filename = "D:\多媒体实验\Lab3\MP3Stego_1_1_19\hidden_text.txt"  
+# 打开文件并读取内容  
+with open(filename, "r") as file:  
+content = file.read()  
+  
+# 打印文件内容  
+print("将被写入的内容：", content)  
+  
 command = fr"D:\多媒体实验\Lab3\MP3Stego_1_1_19\Encode.exe -E D:\多媒体实验\Lab3\MP3Stego_1_1_19\hidden_text.txt -P pass D:\多媒体实验\Lab3\{i}.wav D:\多媒体实验\Lab3\{i}_h.wav"  
 # 执行命令  
-subprocess.run(command, shell=True)
+subprocess.run(command, shell=True)  
+print(f"第{i}个音频文件加密完成！")
 ```
 
 执行结果如下：
 ```bash
+第1个音频文件：1.wav
+将被写入的内容： Hello MP3Stego
+
 MP3StegoEncoder 1.1.19
 See README file for copyright info
 Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
@@ -197,6 +210,10 @@ Bitrate=128 kbps  De-emphasis: none  CRC: off
 Encoding "D:\��ý��ʵ��\Lab3\1.wav" to "D:\��ý��ʵ��\Lab3\1_h.wav"
 Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
+第1个音频文件加密完成！
+第2个音频文件：2.wav
+将被写入的内容： Hello MP3Stego
+
 MP3StegoEncoder 1.1.19
 See README file for copyright info
 Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
@@ -205,6 +222,10 @@ Bitrate=128 kbps  De-emphasis: none  CRC: off
 Encoding "D:\��ý��ʵ��\Lab3\2.wav" to "D:\��ý��ʵ��\Lab3\2_h.wav"
 Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
+第2个音频文件加密完成！
+第3个音频文件：3.wav
+将被写入的内容： Hello MP3Stego
+
 MP3StegoEncoder 1.1.19
 See README file for copyright info
 Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
@@ -213,6 +234,10 @@ Bitrate=128 kbps  De-emphasis: none  CRC: off
 Encoding "D:\��ý��ʵ��\Lab3\3.wav" to "D:\��ý��ʵ��\Lab3\3_h.wav"
 Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
+第3个音频文件加密完成！
+第4个音频文件：4.wav
+将被写入的内容： Hello MP3Stego
+
 MP3StegoEncoder 1.1.19
 See README file for copyright info
 Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
@@ -221,6 +246,10 @@ Bitrate=128 kbps  De-emphasis: none  CRC: off
 Encoding "D:\��ý��ʵ��\Lab3\4.wav" to "D:\��ý��ʵ��\Lab3\4_h.wav"
 Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
+第4个音频文件加密完成！
+第5个音频文件：5.wav
+将被写入的内容： Hello MP3Stego
+
 MP3StegoEncoder 1.1.19
 See README file for copyright info
 Microsoft RIFF, WAVE audio, PCM, stereo 44100Hz 16bit, Length:  0: 0:40
@@ -229,6 +258,7 @@ Bitrate=128 kbps  De-emphasis: none  CRC: off
 Encoding "D:\��ý��ʵ��\Lab3\5.wav" to "D:\��ý��ʵ��\Lab3\5_h.wav"
 Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 [Frame   1531 of   1531] (100.00%) Finished in  0: 0: 0
+第5个音频文件加密完成！
 
 ```
 
