@@ -229,4 +229,27 @@ Encoding "D:\��ý��ʵ��\Lab3\5.wav" to "D:\��ý��ʵ��\La
 
 ## 4  比较嵌入消息、提取消息的内容
 ### 4.1 提取消息
+#### LSBR
+第1个音频文件：lsbr_encrypted_audio1.wav
+提取的WAV消息： Hello LSBR, put 1 in 1.wav
+第2个音频文件：lsbr_encrypted_audio2.wav
+提取的WAV消息： Hello LSBR, put 2 in 2.wav
+第3个音频文件：lsbr_encrypted_audio3.wav
+提取的WAV消息： Hello LSBR, put 3 in 3.wav
+第4个音频文件：lsbr_encrypted_audio4.wav
+提取的WAV消息： Hello LSBR, put 4 in 4.wav
+第5个音频文件：lsbr_encrypted_audio5.wav
+提取的WAV消息： Hello LSBR, put 5 in 5.wav
+#### LSBM
+第1个音频文件：lsbm_encrypted_audio1.wav
+提取的WAV消息： Hello LBSM, put 1 in 1.wav
+第2个音频文件：lsbm_encrypted_audio2.wav
+提取的WAV消息： Hello LBSM, put 2 in 2.wav
+第3个音频文件：lsbm_encrypted_audio3.wav
+提取的WAV消息： Hello LBSM, put 3 in 3.wav
+第4个音频文件：lsbm_encrypted_audio4.wav
+提取的WAV消息： Hello LBSM, put 4 in 4.wav
+第5个音频文件：lsbm_encrypted_audio5.wav
+提取的WAV消息： Hello LBSM, put 5 in 5.wav
+#### MP3Stego
 
