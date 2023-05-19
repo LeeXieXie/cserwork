@@ -130,6 +130,50 @@ print(f"第{i}个音频文件：" + f"lsbm_encrypted_audio{i}.wav")
 print("提取的WAV消息：", extracted_message_wav)
 ```
 
+## 2.3 比较LSBR和LSBM的直方图
+绘制直方图源代码：
+```python
+import wave  
+import numpy as np  
+import matplotlib.pyplot as plt  
+  
+# 绘制直方图比较  
+for i in range(1, 6):  
+# 读取原始音频文件  
+audio = wave.open(fr"{i}.wav", 'rb')  
+audio_data = audio.readframes(audio.getnframes())  
+audio.close()  
+audio_data = np.frombuffer(audio_data, dtype=np.uint8)  
+  
+# 读取LSBR加密后的音频文件  
+audio_lsbr = wave.open(fr"lsbr_encrypted_audio{i}.wav", 'rb')  
+audio_lsbr_data = audio_lsbr.readframes(audio_lsbr.getnframes())  
+audio_lsbr.close()  
+audio_lsbr_data = np.frombuffer(audio_lsbr_data, dtype=np.uint8)  
+  
+# 读取LSBM加密后的音频文件  
+audio_lsbm = wave.open(fr"lsbm_encrypted_audio{i}.wav", 'rb')  
+audio_lsbm_data = audio_lsbm.readframes(audio_lsbm.getnframes())  
+audio_lsbm.close()  
+audio_lsbm_data = np.frombuffer(audio_lsbm_data, dtype=np.uint8)  
+  
+# 绘制直方图  
+plt.hist(audio_data, bins=256, density=1, facecolor='blue', alpha=0.5, label=f'Original{i}')  
+plt.hist(audio_lsbr_data, bins=256, density=1, facecolor='red', alpha=0.5, label=f'LSBR{i}')  
+plt.hist(audio_lsbm_data, bins=256, density=1, facecolor='green', alpha=0.5, label=f'LSBM{i}')  
+plt.legend()  
+plt.savefig(f"{i}.png")  
+plt.show()  
+plt.close()
+```
+1.wav
+![1.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192216778.png)
+2.wav
+![2.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192216323.png)
+3.wav 
+![3.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192216621.png)
+4.wav
+![4.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192217936.png)
+5.wav
+![5.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305192217250.png)
 
-
-23
