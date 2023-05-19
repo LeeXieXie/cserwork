@@ -266,6 +266,7 @@ Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 ## 4  比较嵌入消息、提取消息的内容
 ### 4.1 提取消息
 #### LSBR
+```bash
 第1个音频文件：lsbr_encrypted_audio1.wav
 提取的WAV消息： Hello LSBR, put 1 in 1.wav
 第2个音频文件：lsbr_encrypted_audio2.wav
@@ -276,7 +277,9 @@ Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 提取的WAV消息： Hello LSBR, put 4 in 4.wav
 第5个音频文件：lsbr_encrypted_audio5.wav
 提取的WAV消息： Hello LSBR, put 5 in 5.wav
+```
 #### LSBM
+```bash
 第1个音频文件：lsbm_encrypted_audio1.wav
 提取的WAV消息： Hello LBSM, put 1 in 1.wav
 第2个音频文件：lsbm_encrypted_audio2.wav
@@ -287,6 +290,8 @@ Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 提取的WAV消息： Hello LBSM, put 4 in 4.wav
 第5个音频文件：lsbm_encrypted_audio5.wav
 提取的WAV消息： Hello LBSM, put 5 in 5.wav
+```
+
 #### MP3Stego
 提取消息代码
 ```python
@@ -307,6 +312,8 @@ content = file.read()
 print("提取的消息：", content)  
 print()
 ```
+
+```bash
 第1个音频文件：1_h.wav
 D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\1_h.wav D:\多媒体实验\Lab3\1_h.wav.pcm
 Input file = 'D:\��ý��ʵ��\Lab3\1_h.wav'  output file = 'D:\��ý��ʵ��\Lab3\1_h.wav.pcm'
@@ -390,6 +397,7 @@ Decoding of "D:\��ý��ʵ��\Lab3\5_h.wav" is finished
 The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\5_h.wav.pcm"
 第5个音频文件解密完成！
 提取的消息： Hello MP3Stego
+```
 
 **经过对比可知与我们写入的信息一致！**
 
