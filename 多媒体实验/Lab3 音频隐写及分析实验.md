@@ -262,6 +262,7 @@ Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 
 ```
 
+
 ## 4  比较嵌入消息、提取消息的内容
 ### 4.1 提取消息
 #### LSBR
@@ -287,4 +288,109 @@ Hiding "D:\��ý��ʵ��\Lab3\MP3Stego_1_1_19\hidden_text.txt"
 第5个音频文件：lsbm_encrypted_audio5.wav
 提取的WAV消息： Hello LBSM, put 5 in 5.wav
 #### MP3Stego
+提取消息代码
+```python
+import subprocess  
+  
+for i in range(1, 6):  
+print(f"第{i}个音频文件：" + f"{i}_h.wav")  
+command = fr"D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\{i}_h.wav D:\多媒体实验\Lab3\{i}_h.wav.pcm"  
+# 执行命令  
+print(command)  
+subprocess.run(command, shell=True)  
+print(f"第{i}个音频文件解密完成！")  
+filename = fr"D:\多媒体实验\Lab3\{i}_h.wav.txt"  
+# 打开文件并读取内容  
+with open(filename, "r") as file:  
+content = file.read()  
+  
+print("提取的消息：", content)  
+print()
+```
+第1个音频文件：1_h.wav
+D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\1_h.wav D:\多媒体实验\Lab3\1_h.wav.pcm
+Input file = 'D:\��ý��ʵ��\Lab3\1_h.wav'  output file = 'D:\��ý��ʵ��\Lab3\1_h.wav.pcm'
+Will attempt to extract hidden information. Output: D:\��ý��ʵ��\Lab3\1_h.wav.txt
+the bit stream file D:\��ý��ʵ��\Lab3\1_h.wav is a BINARY file
+HDR: s=FFF, id=1, l=3, ep=off, br=9, sf=0, pd=1, pr=0, m=0, js=0, c=0, o=0, e=0
+alg.=MPEG-1, layer=III, tot bitrate=128, sfrq=44.1
+mode=stereo, sblim=32, jsbd=32, ch=2
+MP3StegoEncoder 1.1.19
+See README file for copyright info
+[Frame 1531]Avg slots/frame = 417.688; b/smp = 2.90; br = 127.917 kbps
+Decoding of "D:\��ý��ʵ��\Lab3\1_h.wav" is finished
+The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\1_h.wav.pcm"
+第1个音频文件解密完成！
+提取的消息： Hello MP3Stego
 
+
+第2个音频文件：2_h.wav
+D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\2_h.wav D:\多媒体实验\Lab3\2_h.wav.pcm
+Input file = 'D:\��ý��ʵ��\Lab3\2_h.wav'  output file = 'D:\��ý��ʵ��\Lab3\2_h.wav.pcm'
+Will attempt to extract hidden information. Output: D:\��ý��ʵ��\Lab3\2_h.wav.txt
+the bit stream file D:\��ý��ʵ��\Lab3\2_h.wav is a BINARY file
+HDR: s=FFF, id=1, l=3, ep=off, br=9, sf=0, pd=1, pr=0, m=0, js=0, c=0, o=0, e=0
+alg.=MPEG-1, layer=III, tot bitrate=128, sfrq=44.1
+mode=stereo, sblim=32, jsbd=32, ch=2
+MP3StegoEncoder 1.1.19
+See README file for copyright info
+[Frame 1531]Avg slots/frame = 417.688; b/smp = 2.90; br = 127.917 kbps
+Decoding of "D:\��ý��ʵ��\Lab3\2_h.wav" is finished
+The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\2_h.wav.pcm"
+第2个音频文件解密完成！
+提取的消息： Hello MP3Stego
+
+
+第3个音频文件：3_h.wav
+D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\3_h.wav D:\多媒体实验\Lab3\3_h.wav.pcm
+MP3StegoEncoder 1.1.19
+See README file for copyright info
+[Frame   50]Input file = 'D:\��ý��ʵ��\Lab3\3_h.wav'  output file = 'D:\��ý��ʵ��\Lab3\3_h.wav.pcm'
+Will attempt to extract hidden information. Output: D:\��ý��ʵ��\Lab3\3_h.wav.txt
+the bit stream file D:\��ý��ʵ��\Lab3\3_h.wav is a BINARY file
+HDR: s=FFF, id=1, l=3, ep=off, br=9, sf=0, pd=1, pr=0, m=0, js=0, c=0, o=0, e=0
+alg.=MPEG-1, layer=III, tot bitrate=128, sfrq=44.1
+mode=stereo, sblim=32, jsbd=32, ch=2
+[Frame 1531]Avg slots/frame = 417.688; b/smp = 2.90; br = 127.917 kbps
+Decoding of "D:\��ý��ʵ��\Lab3\3_h.wav" is finished
+The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\3_h.wav.pcm"
+第3个音频文件解密完成！
+提取的消息： Hello MP3Stego
+
+
+第4个音频文件：4_h.wav
+D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\4_h.wav D:\多媒体实验\Lab3\4_h.wav.pcm
+MP3StegoEncoder 1.1.19
+See README file for copyright info
+[Frame   48]Input file = 'D:\��ý��ʵ��\Lab3\4_h.wav'  output file = 'D:\��ý��ʵ��\Lab3\4_h.wav.pcm'
+Will attempt to extract hidden information. Output: D:\��ý��ʵ��\Lab3\4_h.wav.txt
+the bit stream file D:\��ý��ʵ��\Lab3\4_h.wav is a BINARY file
+HDR: s=FFF, id=1, l=3, ep=off, br=9, sf=0, pd=1, pr=0, m=0, js=0, c=0, o=0, e=0
+alg.=MPEG-1, layer=III, tot bitrate=128, sfrq=44.1
+mode=stereo, sblim=32, jsbd=32, ch=2
+[Frame 1531]Avg slots/frame = 417.688; b/smp = 2.90; br = 127.917 kbps
+Decoding of "D:\��ý��ʵ��\Lab3\4_h.wav" is finished
+The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\4_h.wav.pcm"
+第4个音频文件解密完成！
+提取的消息： Hello MP3Stego
+
+
+第5个音频文件：5_h.wav
+D:\多媒体实验\Lab3\MP3Stego_1_1_19\Decode.exe -X -P pass D:\多媒体实验\Lab3\5_h.wav D:\多媒体实验\Lab3\5_h.wav.pcm
+MP3StegoEncoder 1.1.19
+See README file for copyright info
+[Frame   49]Input file = 'D:\��ý��ʵ��\Lab3\5_h.wav'  output file = 'D:\��ý��ʵ��\Lab3\5_h.wav.pcm'
+Will attempt to extract hidden information. Output: D:\��ý��ʵ��\Lab3\5_h.wav.txt
+the bit stream file D:\��ý��ʵ��\Lab3\5_h.wav is a BINARY file
+HDR: s=FFF, id=1, l=3, ep=off, br=9, sf=0, pd=1, pr=0, m=0, js=0, c=0, o=0, e=0
+alg.=MPEG-1, layer=III, tot bitrate=128, sfrq=44.1
+mode=stereo, sblim=32, jsbd=32, ch=2
+[Frame 1531]Avg slots/frame = 417.688; b/smp = 2.90; br = 127.917 kbps
+Decoding of "D:\��ý��ʵ��\Lab3\5_h.wav" is finished
+The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\5_h.wav.pcm"
+第5个音频文件解密完成！
+提取的消息： Hello MP3Stego
+
+**经过对比可知与我们写入的信息一致！**
+
+## 5 计算上述3种隐写算法的隐藏容量
