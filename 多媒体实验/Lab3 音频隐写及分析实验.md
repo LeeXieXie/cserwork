@@ -401,4 +401,4 @@ The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\5_h.wav.pcm"
 
 **经过对比可知与我们写入的信息一致！**
 
-## 5 计算上述3种隐写算法的隐藏容量
+
