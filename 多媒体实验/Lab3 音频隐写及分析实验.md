@@ -403,5 +403,3 @@ The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\5_h.wav.pcm"
 
 **经过对比可知与我们写入的信息一致！**
 
-
-![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305230004206.png)
