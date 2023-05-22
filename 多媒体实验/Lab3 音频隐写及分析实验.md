@@ -1,3 +1,5 @@
+***姓名：李效宇
+学号：202228013329004***
 # 实验3：音频隐写及分析实验
 ## 1 选择WAV格式音频
 ![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305191528153.png)
@@ -402,3 +404,4 @@ The decoded PCM output file name is "D:\��ý��ʵ��\Lab3\5_h.wav.pcm"
 **经过对比可知与我们写入的信息一致！**
 
 
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305230004206.png)
