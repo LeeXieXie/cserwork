@@ -7,3 +7,4 @@
 # 3 激活（KMS）
 可用的kms服务器列表，进入下面网址查看
 [KMS 列表 | Yerong の小窝](https://www.coolhub.top/tech-articles/kms_list.html)
+![](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305231054275.png)
