@@ -1,5 +1,4 @@
-***姓名：李效宇
-学号：202228013329004***
+
 # 实验1 ： MP3/AAC音频编解码分析实验
 ## 1 选择WAV格式音频
 ![image.png](https://wanwurong.oss-cn-beijing.aliyuncs.com/picgo/202305152133953.png)
